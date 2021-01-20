@@ -21,9 +21,9 @@ typedef struct SceSysrootHardwareFlags {
 } __attribute__((packed)) SceSysrootHardwareFlags;
 
 int ksceKblGetHardwareFlags(SceSysrootHardwareFlags *data);
-int ksceKblSysrootIofilemgrStart(void);
-int ksceKblSysrootProcessmgrStart2(void);
-int ksceKblSysrootThreadMgrStartAfterProcess(void);
+int sceKernelSysrootIofilemgrStart(void);
+int sceKernelSysrootProcessmgrStart2(void);
+int sceKernelSysrootThreadMgrStartAfterProcess(void);
 void ksceKblSysrootCpuCoreSyncAll(void);
 void ksceKblSysrootCpuCoreSyncWait(int core);
 
@@ -40,20 +40,20 @@ int ksceKblAuthMgrClose(void);
 void ksceKblCpuDisableIrqInterrupts(void);
 
 // SceSblAIMgr
-int ksceKblIsCEX(void);
-int ksceKblIsCEXJpFat(void);
-int ksceKblIsDEX(void);
-int ksceKblIsTool(void);
-int ksceKblIsTest(void);
+int sceSblAimgrIsCEX(void);
+int sceSblAimgrIsDEX(void);
+int sceSblAimgrIsDiag(void);
+int sceSblAimgrIsTool(void);
+int sceSblAimgrIsTest(void);
 
-int ksceKblIsVITA(void);
-int ksceKblIsDolce(void);
-int ksceKblIsGenuineDolce(void);
+int sceSblAimgrIsVITA(void);
+int sceSblAimgrIsDolce(void);
+int sceSblAimgrIsGenuineDolce(void);
 
 // SceDipsw
-int ksceKblCheckDipsw(int a1);
+int sceKernelCheckDipsw(int a1);
 
-// SceQafMgr
-int ksceKblIsAllowKernelDebug(void);
+// SceSblQafMgr
+int sceSblQafManagerIsAllowKernelDebug(void);
 
 #endif	/* _KBL_H_ */
