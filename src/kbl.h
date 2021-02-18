@@ -10,10 +10,10 @@
 
 // SceDebug
 int ksceKblPutchar(void *args, char c);
-int ksceKblPrintf(const char *fmt, ...);
+int sceKernelPrintf(const char *fmt, ...);
 // ksceKblPrintfLevel
 int ksceKblGetMinimumLogLevel(void);
-void *ksceKblGetPutcharHandler(void);
+void *sceKernelGetDebugPutchar(void);
 
 // SceSysroot
 typedef struct SceSysrootHardwareFlags {
@@ -24,8 +24,8 @@ int ksceKblGetHardwareFlags(SceSysrootHardwareFlags *data);
 int sceKernelSysrootIofilemgrStart(void);
 int sceKernelSysrootProcessmgrStart2(void);
 int sceKernelSysrootThreadMgrStartAfterProcess(void);
-void ksceKblSysrootCpuCoreSyncAll(void);
-void ksceKblSysrootCpuCoreSyncWait(int core);
+void sceKernelSysrootCorelockLock(int core);
+void sceKernelSysrootCorelockUnlock(void);
 
 // SceKbl
 typedef struct SceModuleLoadList {

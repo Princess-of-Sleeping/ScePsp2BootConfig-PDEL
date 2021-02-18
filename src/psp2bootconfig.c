@@ -110,7 +110,7 @@ int module_bootstart(SceSize args, void *argp){
 
 	*(int   *)(argp + 0x2FC) = 0;
 	*(int   *)(argp + 0x300) = 0;
-	*(void **)(argp + 0x304) = ksceKblGetPutcharHandler();
+	*(void **)(argp + 0x304) = sceKernelGetDebugPutchar();
 	*(int   *)(argp + 0x308) = ksceKblGetMinimumLogLevel();
 
 	ksceKblStartModule(base_kernel_uid, BASE_KERNEL_ENTRY_NUM, sizeof(argp), argp);

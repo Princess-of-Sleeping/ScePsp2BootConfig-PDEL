@@ -9,6 +9,7 @@ modules:
           sceKernelCheckDipsw: 0xC8F4DE71
           sceKernelPrintf: 0x13A5ABEF
           sceKernelPrintfLevel: 0x752E7EEC
+          sceKernelGetDebugPutchar: 0x9B868276
           sceKernelCpuId: 0xB506A10E
           sceSblQafManagerIsAllowKernelDebug: 0xCE94F329
           sceSblAimgrIsCEX: 0x8A416887
@@ -22,12 +23,11 @@ modules:
           sceKernelSysrootIofilemgrStart: 0xC7B77991
           sceKernelSysrootThreadMgrStartAfterProcess: 0x1DB28F02
           sceKernelSysrootProcessmgrStart2: 0x161D6FCC
+          sceKernelSysrootCorelockLock: 0x807B4437
+          sceKernelSysrootCorelockUnlock: 0x314AA770
           ksceKblPutchar: 0x08E9FAEB
-          ksceKblGetPutcharHandler: 0x9B868276
           ksceKblGetMinimumLogLevel: 0xC011935A
           ksceKblCpuDisableIrqInterrupts: 0xDDB3A1A8
-          ksceKblSysrootCpuCoreSyncAll: 0x314AA770
-          ksceKblSysrootCpuCoreSyncWait: 0x807B4437
           ksceKblGetHardwareFlags: 0xD3A516D5
           ksceKblLoadModule: 0x6D7A1F18
           ksceKblStartModule: 0x9A92436E
