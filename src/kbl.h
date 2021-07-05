@@ -12,7 +12,7 @@
 int ksceKblPutchar(void *args, char c);
 int sceKernelPrintf(const char *fmt, ...);
 // ksceKblPrintfLevel
-int ksceKblGetMinimumLogLevel(void);
+int sceKernelGetDebugLevel(void);
 void *sceKernelGetDebugPutchar(void);
 
 // SceSysroot
